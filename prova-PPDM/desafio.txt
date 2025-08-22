@@ -1,0 +1,81 @@
+-- ESTRUTURA DA FUNÇÃO 
+    DART X PYTHON
+
+dart - a estrutura do dart é assim: 
+void nomeDaFuncao(TipoParametro parametro) {
+    corpo da função
+  return valor;
+}
+
+python - a estrutura do py é assim: 
+def nome_da_funcao(parametro):
+        corpo da função
+    return valor
+
+-- ESTRUTURA DA CLASS   
+
+CLASS - PYTHON a estrutura da class do do python é desta forma
+class Produto:
+    def __init__(self, nome, preco, estoque):
+        self.nome = nome
+        self.preco = preco
+        self.estoque = estoque
+
+CLASS - DART a estrutura da class do do dart é desta forma
+class Produto {
+  String nome;
+  double preco;
+  int estoque;
+
+  Produto(this.nome, this.preco, this.estoque);
+}
+
+
+-- ESTRUTURA DA LISTA
+
+PYTHON a estrutura da lista do do py é desta forma
+lista_de_produtos = [
+    Produto("Base Líquida", 29.90, 10)
+]
+
+DART a estrutura da lista do do dart é desta forma
+List<Produto> listaDeProdutos = [
+    Produto("Base Líquida", 29.90, 10),
+];
+
+-- ESTRUTURA DE IF/ELSE
+
+PYTHON a estrutura do if/else do do py é desta forma:
+if teste >= numero:
+    print(" ")
+else:
+    print(" ")
+
+DART a estrutura do if/else do do dart é desta forma:
+if (teste >= numero) {
+  print(" ");
+} else {
+  print(" ");
+}
+
+-- ESTRUTURA DE INPUT
+
+DART a estrutura do input do do dart é desta forma:
+stdout.write("Quantidade desejada: ");
+      quantidade = int.parse(stdin.readLineSync()!);
+
+PYTHON  a estrutura do input do do py é desta forma:
+nome = input("Digite seu nome: ")
+
+-- ESTRUTURA DO FOR
+
+DART a estrutura do FOR  do dart é desta forma:
+for (int i = 0; i < 5; i++) {
+  print("Valor: $i");
+}
+
+PYTHON a estrutura do FOR  do py é desta forma:
+nomes = ["Ana", "Fran", "Luana"]
+
+for nome in nomes:
+    print(nome)
