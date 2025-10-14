@@ -1,8 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class TelaInicio extends StatelessWidget {
+class TelaInicio extends StatefulWidget {
   const TelaInicio({super.key});
+
+  @override
+  State<TelaInicio> createState() => _TelaInicioState();
+}
+
+class _TelaInicioState extends State<TelaInicio> {
+  bool mostrarimg = false;
+
+  void minhasferramentas(){
+    setState(() {
+      mostrarimg = true;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -67,23 +80,42 @@ class TelaInicio extends StatelessWidget {
                     ),
                   ),
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                Column(
+                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const SizedBox(height: 170),
-                    Image.asset("assets/images/fluter.png", width: 60),
-                    const SizedBox(width: 20),
-                    Image.asset("assets/images/react.png", width: 60),
-                    const SizedBox(width: 20),
-                    Image.asset("assets/images/python.png", width: 60),
-                    const SizedBox(width: 20),
-                    Image.asset("assets/images/figma.png", width: 40),
-                    const SizedBox(width: 20),
-                    Image.asset("assets/images/mysql.png", width: 100),
-                    const SizedBox(width: 20),
-                    Image.asset("assets/images/java.png", width: 60),
+                    ElevatedButton( 
+                      style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFF2494C8),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                    ),
+                    onPressed: minhasferramentas,
+                    child: const Text("Ver ferramentas", style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 15)
+                      )
+                    ),  
                   ],
                 ),
+                if(mostrarimg)
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const SizedBox(height: 170),
+                      Image.asset("assets/images/fluter.png", width: 60),
+                      const SizedBox(width: 20),
+                      Image.asset("assets/images/react.png", width: 60),
+                      const SizedBox(width: 20),
+                      Image.asset("assets/images/python.png", width: 60),
+                      const SizedBox(width: 20),
+                      Image.asset("assets/images/figma.png", width: 40),
+                      const SizedBox(width: 20),
+                      Image.asset("assets/images/mysql.png", width: 100),
+                      const SizedBox(width: 20), 
+                      Image.asset("assets/images/java.png", width: 60),
+                    ],
+                  ),
                 const SizedBox(height: 70),
                 Container(
                   color: Color(0xFF2494C8),
