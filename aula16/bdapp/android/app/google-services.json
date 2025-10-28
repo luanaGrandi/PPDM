@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "670087961295",
+    "project_id": "bdapp-c23db",
+    "storage_bucket": "bdapp-c23db.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:670087961295:android:a3445d34046b3d5d5975ba",
+        "android_client_info": {
+          "package_name": "com.bdapp.bdapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSd9xdXzYPPcja6lVAJhXdMbiDI8RA3Mw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
