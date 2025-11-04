@@ -1,3 +1,4 @@
+import 'package:bdapp/post.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -62,10 +63,25 @@ class _TelaGetState extends State<TelaGet> {
           foregroundColor: Colors.white,
 
         ),
-        body: Column(
-          children: [
-            Text("$temperatura")
-          ],
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text("$temperatura °C", style: TextStyle(fontSize: 35)),
+              SizedBox(height: 30),
+              ElevatedButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => PostPage()));
+              }, 
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blueAccent,
+                  padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 15),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(0),
+                  ),
+                ),
+              child: Text("Ir pra pagina Post",style: TextStyle(color: Colors.white, fontSize: 15)))
+            ],
+          ),
         )
       ),
     );
