@@ -30,7 +30,7 @@ class _PostPageState extends State<PostPage> {
   //future, porque a confirmação acontece no futuro
   Future<void> postValue() async{
     try{
-       FirebaseFirestore.instance.collection("monitoramneto").add(
+       FirebaseFirestore.instance.collection("monitoramento").add(
         {
           "temperatura": novaTemperatura.text,
         }
